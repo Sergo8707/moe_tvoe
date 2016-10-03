@@ -3,8 +3,13 @@ source 'https://rubygems.org'
 # зависим от рельсов 4.2.*
 gem 'rails', '~> 4.2.6'
 
+gem 'devise', '~> 4.1.1'
+
 # гем для поддержки jquery
 gem 'jquery-rails'
+
+# гем с русскими форматами (времени и пр.)
+gem 'russian'
 
 # гем, интегрирующий bootstrap
 gem 'twitter-bootstrap-rails'

@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!, except: [:show, :index]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_current_user_item, only: [:edit, :update, :destroy]
   # GET /items
   def index
     @items = Item.all
@@ -12,7 +13,7 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
-    @item = Item.new
+    @item = current_user.items.build
   end
 
   # GET /items/1/edit
@@ -21,7 +22,7 @@ class ItemsController < ApplicationController
 
   # POST /items
   def create
-    @item = Item.new(item_params)
+    @item = current_user.items.build(item_params)
 
     if @item.save
       redirect_to @item, notice: 'Item was successfully created.'
@@ -46,11 +47,16 @@ class ItemsController < ApplicationController
   end
 
   private
-    def set_item
-      @item = Item.find(params[:id])
-    end
 
-    def item_params
-      params.require(:item).permit(:title, :address, :description)
-    end
+  def set_current_user_event
+    @event = current_user.items.find(params[:id])
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
+  end
+
+  def item_params
+    params.require(:item).permit(:title, :address, :description)
+  end
 end
