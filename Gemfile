@@ -6,6 +6,9 @@ gem 'rails', '~> 4.2.6'
 # гем для поддержки jquery
 gem 'jquery-rails'
 
+# гем, интегрирующий bootstrap
+gem 'twitter-bootstrap-rails'
+
 # в продакшен сервере heroku этот гем соединяет с базой данных Postgres
 group :production do
   gem 'pg'
