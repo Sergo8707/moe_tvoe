@@ -22,30 +22,10 @@
     color: #fff;
 }
 
-.item-description * {
-    color: white;
-}
-
-.item-description small {
-    color: #ffffff;
-}
-
 .item-info-inner {
     background: rgba(0, 0, 0, 0.4);
 }
 
-.item-map {
-    margin: 20px 0;
-    width: 30%;
-    height: 300px;
-    float:right;
-}
-
 .space {
     margin-right: 5px;
-}
-
-.img-logo {
-    width: 100px;
-    height: 200px;
 }

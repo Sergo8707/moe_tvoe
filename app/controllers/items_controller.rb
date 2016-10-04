@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_item, only: [:show]
   before_action :set_current_user_item, only: [:edit, :update, :destroy]
   # GET /items
   def index
@@ -9,6 +9,7 @@ class ItemsController < ApplicationController
 
   # GET /items/1
   def show
+    @new_photo = @item.photos.build(params[:photo])
   end
 
   # GET /items/new
@@ -25,7 +26,7 @@ class ItemsController < ApplicationController
     @item = current_user.items.build(item_params)
 
     if @item.save
-      redirect_to @item, notice: 'Item was successfully created.'
+      redirect_to @item, notice: I18n.t('controllers.items.created')
     else
       render :new
     end
@@ -34,7 +35,7 @@ class ItemsController < ApplicationController
   # PATCH/PUT /items/1
   def update
     if @item.update(item_params)
-      redirect_to @item, notice: 'Item was successfully updated.'
+      redirect_to @item, notice: I18n.t('controllers.items.updated')
     else
       render :edit
     end
@@ -43,13 +44,13 @@ class ItemsController < ApplicationController
   # DELETE /items/1
   def destroy
     @item.destroy
-    redirect_to items_url, notice: 'Item was successfully destroyed.'
+    redirect_to items_url, notice: I18n.t('controllers.items.destroyed')
   end
 
   private
 
-  def set_current_user_event
-    @event = current_user.items.find(params[:id])
+  def set_current_user_item
+    @item = current_user.items.find(params[:id])
   end
 
   def set_item

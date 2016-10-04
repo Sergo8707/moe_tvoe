@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
-    before_action :set_current_user, except: [:show]
+    @user = User.find(params[:id])
   end
 
   # GET /users/1/edit
@@ -14,19 +14,20 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   def update
     if @user.update(user_params)
-      redirect_to @user, notice: 'User was successfully updated.'
+      redirect_to @user, notice: I18n.t('controllers.users.updated')
     else
       render :edit
     end
   end
 
   private
+
   def set_current_user
     @user = current_user
   end
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:name, :email, :phone, :address)
+      params.require(:user).permit(:name, :email, :phone, :address, :avatar)
     end
 end
