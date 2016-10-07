@@ -1,3 +1,5 @@
+require 'will_paginate/array'
+
 class PhotosController < ApplicationController
   before_action :set_item, only: [:create, :destroy]
 
@@ -5,7 +7,6 @@ class PhotosController < ApplicationController
 
   def create
     @new_photo = @item.photos.build(photo_params)
-
     @new_photo.user = current_user
 
     if @new_photo.save

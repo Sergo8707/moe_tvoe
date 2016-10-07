@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_many :items, dependent: :destroy
 
   validates :name, presence: true, length: {maximum: 35}
+  validates :phone, presence: true, length: {maximum: 15}
+  validates :address, presence: true
 
   before_validation :set_name, on: :create
 

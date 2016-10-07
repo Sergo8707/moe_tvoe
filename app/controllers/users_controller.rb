@@ -1,3 +1,5 @@
+require 'will_paginate/array'
+
 class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:show]
   before_action :set_current_user, except: [:show]
@@ -28,6 +30,6 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:name, :email, :phone, :address, :avatar)
+      params.require(:user).permit(:name, :email, :phone, :address, :avatar, :destroy)
     end
 end

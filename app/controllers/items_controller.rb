@@ -1,3 +1,4 @@
+require 'will_paginate/array'
 class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :set_item, only: [:show]
@@ -5,6 +6,7 @@ class ItemsController < ApplicationController
   # GET /items
   def index
     @items = Item.all
+    @items = Item.paginate(page: params[:page], per_page: 18).order(created_at: :desc)
   end
 
   # GET /items/1
@@ -58,6 +60,6 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    params.require(:item).permit(:title, :address, :description)
+    params.require(:item).permit(:title, :address, :description, :page)
   end
 end

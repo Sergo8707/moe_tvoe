@@ -11,6 +11,11 @@ gem 'devise-i18n'
 # гем для поддержки jquery
 gem 'jquery-rails'
 
+# гем для отображения количества страниц
+gem 'will_paginate', '~> 3.1.1'
+
+gem 'api_pagination_headers'
+
 # гем с русскими форматами (времени и пр.)
 gem 'russian'
 

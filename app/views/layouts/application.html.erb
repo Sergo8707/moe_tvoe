@@ -48,7 +48,7 @@
     <%= image_tag "logo.jpg", alt: "swap_img",
                   id: "HomeImage",
                   class: "img-circle img-logo" %>
-      <%= link_to ' Хочу меняться', new_item_path, class: 'text-center  btn btn-success navbar-btn fa fa-exchange' %>
+    <%= link_to ' Хочу меняться', new_item_path, class: 'text-center  btn btn-success navbar-btn fa fa-exchange' %>
     <ul class="navbar-right">
       <% if user_signed_in? %>
           <%= link_to ' Профиль', current_user, class: 'btn btn-default navbar-btn fa fa-user' %>
@@ -70,13 +70,7 @@
       <%= bootstrap_flash %>
       <%= yield %>
     </div>
-  </div><!--/row-->
-
-  <footer>
-    <p>&copy; Team V&S 2016</p>
-  </footer>
-
+  </div>
 </div> <!-- /container -->
-
 </body>
 </html>
