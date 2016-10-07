@@ -35,6 +35,7 @@ gem 'fog-aws'
 group :production do
   gem 'pg'
   gem 'uglifier', '>= 1.3.0'
+  gem 'rails_12factor'
 end
 
 group :development, :test do
