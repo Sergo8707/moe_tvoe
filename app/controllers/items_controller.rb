@@ -1,4 +1,3 @@
-require 'will_paginate/array'
 class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :set_item, only: [:show]

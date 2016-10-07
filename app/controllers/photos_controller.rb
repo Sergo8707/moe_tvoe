@@ -1,5 +1,3 @@
-require 'will_paginate/array'
-
 class PhotosController < ApplicationController
   before_action :set_item, only: [:create, :destroy]
 
