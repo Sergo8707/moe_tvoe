@@ -8,6 +8,16 @@
     </div>
 
     <div class="form-group">
+      <%= f.label :phone %>
+      <%= f.text_field :phone, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :address %>
+      <%= f.text_field :address, autofocus: true, class: "form-control", placeholder: "Ваш адрес" %>
+    </div>
+
+    <div class="form-group">
       <%= f.label :email %>
       <%= f.text_field :email, class: 'form-control' %>
     </div>
@@ -19,8 +29,16 @@
     </div>
 
     <div class="form-group">
-      <%= f.label :phone %>
-      <%= f.text_field :phone, class: 'form-control' %>
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+          <em class="buffer-left">(<%= @minimum_password_length %> символов минимум)</em>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Пароль" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Повторный пароль" %>
     </div>
 
     <div class="actions">

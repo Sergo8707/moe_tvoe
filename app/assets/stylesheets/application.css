@@ -78,3 +78,11 @@
     width: 100%;
    height: 140px;
 }
+
+.my-bottom-facebook {
+    margin-bottom: 20px;
+}
+
+.my-bottom-facebook a:link {
+    text-decoration: none;
+}

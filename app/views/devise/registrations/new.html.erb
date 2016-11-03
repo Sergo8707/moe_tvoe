@@ -45,16 +45,31 @@
 
             <div class="actions">
               <div class="leftstr">
-                <div class="btn">
-                  <%= render "devise/shared/links" %>
-                </div>
+                <%= link_to "Войти", new_session_path(resource_name) %><br/>
+                <%= link_to "Забыли пароль?", new_password_path(resource_name) %><br/>
               </div>
               <div class="rightstr">
-                <button type="submit" class="btn btn-sm btn-primary">Зарегистрироваться</button>
+                <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
               </div>
             </div>
       <% end %>
       </form>
     </div>
+    <div class="my-bottom-facebook">
+      <%= link_to user_facebook_omniauth_authorize_path do %>
+          <div class="btn-lg btn-block btn-social btn-facebook">
+            <i class="fa fa-facebook"></i> Войти с помощью: Facebook
+          </div>
+      <% end %>
+    </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+

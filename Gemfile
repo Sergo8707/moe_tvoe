@@ -31,6 +31,12 @@ gem 'rmagick'
 # гем для работы carrierwave с хранилищем Amazon S3
 gem 'fog-aws'
 
+# гем для работы facebook
+gem 'omniauth-facebook'
+
+# гем для сокрытия паролей
+gem 'figaro'
+
 # в продакшен сервере heroku этот гем соединяет с базой данных Postgres
 group :production do
   gem 'pg'
