@@ -1,13 +1,13 @@
 <div class="col-sm-12 col-sm-2">
-  <h3><%= link_to item.title, item_path(item) %></h3>
-  <div class="img-thumbnail">
+      <h4 class="title-i"><%= link_to item.title, item_path(item) %></h4>
+  <div class="thumbnail">
     <a href="<%= item_path(item) %>">
       <%= image_tag item_thumb(item), class: "img-app", alt: "item_jpg", id: "HomeImage" %>
     </a>
-    <div class="thumbnail-inner item-info-inner">
-      <div class="item-description">
-        <div class="buffer-both"><%= item.address %></div>
-      </div>
+  </div>
+  <div class="thumbnail-inner item-info-inner">
+    <div class="item-description">
+      <div class="buffer-both"><%= item.address %></div>
     </div>
   </div>
 </div>
