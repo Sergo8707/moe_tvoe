@@ -18,6 +18,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+<<<<<<< HEAD
 //= require_tree .
 
 // Код, который цепляет плагин lightbox к объектам с аттрибутом data-toggle="lightbox"
@@ -35,3 +36,6 @@ $(function(){
         return false;
     });
 });
+=======
+//= require_tree .
+>>>>>>> f48cdcc369a1fa01d07c9cd8527dcddf35b15138
