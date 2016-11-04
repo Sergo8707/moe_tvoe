@@ -31,6 +31,8 @@ module MoeTvoe
      config.i18n.locale = :ru
      config.i18n.fallbacks = [:en]
 
+     config.assets.paths << "#{Rails}/vendor/assets/fonts"
+
      config.time_zone = 'Moscow'
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
