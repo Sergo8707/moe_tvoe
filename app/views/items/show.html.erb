@@ -2,7 +2,7 @@
   <div class="item-info row">
     <div class="col-md-8">
       <h2 class="page-header"><%= @item.title %></h2>
-      <h3><%= @item.address %></h3>
+      <h3><div class='fa fa-map-marker space'></div><%= @item.address %></h3>
       <div class="img-rounded"><%= image_tag(item_photo(@item), class: 'img-thumbnail') %>
       </div>
       <div class="item-photos">
@@ -43,15 +43,21 @@
       <h3><%= render partial: 'users/user', object: @item.user %></h3>
       <table class="table table-striped">
         <tr>
-          <th>Адрес</th>
+          <th>
+            <div class="fa fa-home space"></div>
+            Адрес</th>
           <td><%= @item.user.address %></td>
         </tr>
         <tr>
-          <th>Телефон</th>
+          <th>
+            <div class="fa fa-phone space"></div>
+            Телефон</th>
           <td><%= @item.user.phone %></td>
         </tr>
         <tr>
-          <th>Email</th>
+          <th>
+            <div class="fa fa-envelope space"></div>
+            Email</th>
           <td><%= @item.user.email %></td>
         </tr>
       </table>

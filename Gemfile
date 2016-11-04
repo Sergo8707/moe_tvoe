@@ -37,6 +37,8 @@ gem 'omniauth-facebook'
 # гем для сокрытия паролей
 gem 'figaro'
 
+gem 'turbolinks'
+
 # в продакшен сервере heroku этот гем соединяет с базой данных Postgres
 group :production do
   gem 'pg'
