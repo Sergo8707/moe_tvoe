@@ -12,8 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
 
 // Код, который цепляет плагин lightbox к объектам с аттрибутом data-toggle="lightbox"
 $(document).delegate('*[data-toggle="lightbox"]', 'click', function(item) {
@@ -30,3 +32,4 @@ $(function(){
         return false;
     });
 });
+
