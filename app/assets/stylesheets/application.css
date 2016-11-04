@@ -17,8 +17,12 @@
 /* Twitter bootstrap rails hack for working glyphicons */
 @font-face {
     font-family: 'Glyphicons Halflings';
+
     src: url('/assets/glyphicons-halflings-regular.eot');
-    src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+    src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/glyphicons-halflings-regular.woff') format('woff'),
+    url('/assets/glyphicons-halflings-regular.ttf') format('truetype'),
+    url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
 /* Buffers */
@@ -60,7 +64,7 @@
     padding: 0px 2px 2px;
 }
 
-.img-logo{
+.img-logo {
     height: 50px;
     width: 100px;
     border-radius: 50px;
@@ -74,27 +78,27 @@
     float: left; /* Обтекание справа */
     margin-bottom: 50px;
 }
+
 .title-i a {
     text-decoration: none;
     color: #333;
     font-family: "DejaVu Sans Condensed";
 }
 
-.title-i{
-    white-space: pre-wrap;       /* css-3 */
-    white-space: -moz-pre-wrap;  /* Mozilla, начиная с 1999 года */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+.title-i {
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, начиная с 1999 года */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
     text-align: center;
     overflow-x: hidden;
     margin-bottom: 5px;
     background-color: #cfc;
 
-
     padding: 10px;
     text-align: center;
     width: auto;
-    height:50px;
+    height: 50px;
 
     text-indent: 0px;
     border-radius: 5px;
@@ -103,34 +107,40 @@
     -webkit-transition: all 0.5s linear;
     cursor: pointer;
 }
+
 .title-i:hover {
     background-color: #97CE68;
     width: auto;
-    height:100px;
+    height: 100px;
 }
+
 .thumbnail {
     position: relative;
     width: auto;
     height: 140px;
     overflow: hidden;
 }
+
 .thumbnail img {
     position: absolute;
     left: 50%;
     top: 50%;
     height: 100%;
     width: auto;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
+
 .thumbnail img.portrait {
     width: 100%;
     height: auto;
 }
+
 .my-bottom-facebook {
     margin-bottom: 20px;
 }
+
 .my-bottom-facebook a:link {
     text-decoration: none;
 }
