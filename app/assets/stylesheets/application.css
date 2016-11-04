@@ -35,8 +35,6 @@
     margin-bottom: 0px;
 }
 
-
-
 .img-icon, .img-icon-small {
     height: 50px;
     width: auto;
@@ -49,7 +47,6 @@
     overflow: hidden;
     border-radius: 5px;
     margin-bottom: 5px;
-
 }
 
 .thumbnail h3 {
@@ -106,7 +103,6 @@
     -webkit-transition: all 0.5s linear;
     cursor: pointer;
 }
-
 .title-i:hover {
     background-color: #97CE68;
     width: auto;
@@ -132,11 +128,9 @@
     width: 100%;
     height: auto;
 }
-
 .my-bottom-facebook {
     margin-bottom: 20px;
 }
-
 .my-bottom-facebook a:link {
     text-decoration: none;
 }
