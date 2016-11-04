@@ -15,3 +15,23 @@
 //= require twitter/bootstrap
 //= require_tree .
 
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require_tree .
+
+// Код, который цепляет плагин lightbox к объектам с аттрибутом data-toggle="lightbox"
+$(document).delegate('*[data-toggle="lightbox"]', 'click', function(item) {
+    item.preventDefault();
+    $(this).ekkoLightbox();
+});
+
+// Скрываем форму добавления фотографии и показываем её по клику на ссылку
+$(function(){
+    $('.item-photo-form').hide();
+
+    $('.item-photo-form-link').click(function(){
+        $('.item-photo-form').slideToggle(300);
+        return false;
+    });
+});

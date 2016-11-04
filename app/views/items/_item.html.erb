@@ -1,13 +1,17 @@
 <div class="col-sm-12 col-sm-2">
-      <h4 class="title-i"><%= link_to item.title, item_path(item) %></h4>
+  <h4 class="title-i"><%= link_to item.title, item_path(item) %></h4>
   <div class="thumbnail">
     <a href="<%= item_path(item) %>">
-      <%= image_tag item_thumb(item), class: "img-app", alt: "item_jpg", id: "HomeImage" %>
+      <%= image_tag item_thumb(item), alt: "item_jpg", id: "HomeImage" %>
     </a>
   </div>
   <div class="thumbnail-inner item-info-inner">
     <div class="item-description">
-      <div class="buffer-both"><%= item.address %></div>
+      <div class="buffer-both text-left">
+        <div class='fa fa-map-marker text-address'>
+          &nbsp;|&nbsp;<%= item.address %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
